@@ -1,0 +1,390 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+                                        /* UTILITY CLASS FOR JS */
+.hide {
+    display:none;
+}
+
+
+                                                    /* BASE STYLES */
+body, button {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.logo {
+    width: 80px;
+    height: 25px;
+    height: auto;
+    margin-left: 20px;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: url(/images/image-hero-mobile.png), content-box;
+    background-size: 100%, cover;
+    background-repeat: no-repeat;
+    background-position-y: 60px;
+    height: 55vh;
+    margin-top: 20px;
+}
+
+
+                                                    /* NAVIGATION STYLES  */
+
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    
+    height: 100vh;
+    background: rgba(7, 7, 7, 0.8);
+    width: 100vw;
+    margin-top: -20px;
+    z-index: 100;
+    
+    
+}
+
+#open-menu {
+    width: 30px;
+    height: 20px;
+    align-self: flex-start;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+
+
+#close-menu {
+    align-self: flex-end;
+    cursor: pointer;
+    
+}
+.nav-wrapper {
+    background-color: white;
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 100;
+    
+}
+ul {
+    padding: 20px 20px 20px 10px;
+}
+li {
+    padding: 10px;
+    
+
+}
+a {
+    color: hsl(0, 0%, 41%);
+}
+
+
+.arrow {
+    margin-left: 10px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+
+.features li {
+    width: 110%;
+    
+}
+.features img {
+    margin-right: 10px;
+}
+
+
+/* BUTTONS INSIDE NAV */
+
+button {
+    width: 180px;
+    height: 35px;
+    align-self: flex-start;
+    margin-left: 20px;
+    border-radius: 12px;
+    
+    border: 2px solid hsl(0, 0%, 41%);
+    margin-top: 10px;
+    background: white;
+    color:hsl(0, 0%, 41%);
+    font-size: 16px;
+    cursor: pointer;
+}
+.buttons button:first-of-type {
+    border: none;
+}
+
+
+                                            /* FIRST SECTION AFTER HEADER */
+section {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin:auto;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+
+h1 {
+    font-size: 2.2rem;
+    padding-top: 20px;
+    margin-bottom: 15px;
+
+    
+}
+section p {
+    color:hsl(0, 0%, 41%);
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin-top: 15px;
+    
+}
+
+.learn-more {
+    align-self: center;
+    margin:30px 20px 30px 20px;
+    background: hsl(0, 0%, 8%);
+    color: white;
+    width: 35%;
+    height: 40px;
+    font-size: 14px;
+    box-shadow: 3px 3px  rgb(206, 186, 8);
+    }
+
+
+
+
+                                            /* BUTTON */
+
+footer {
+    margin: 25px;
+    text-align: center;
+    
+}
+
+.footer-image {
+    width: 70px;
+    height:auto;
+    margin-inline:2vw;
+    z-index: 0;
+}
+
+.footer-image:nth-child(2) {
+    width:50px;
+    transform: translateY(7px);
+    
+}
+
+
+@media screen and (min-width:577px) {
+    #hide-desktop {
+        display: none;
+    }
+    body {
+        overflow: scroll;
+        background:url('/images/image-hero-desktop.png');
+        background-repeat:no-repeat;
+        background-size: 31vw;
+        background-position:calc(100% - 20%);
+        height: 100vh;
+        overflow: hidden;
+        
+    }
+
+    
+    #open-menu, #close-menu {
+        display: none;
+    }
+    #navbar  {
+        display: flex;
+        background:none;
+        flex-direction: row;
+        position:static;
+        width: fit-content;
+        height: fit-content;
+        
+    }
+   
+    header {
+        background:none;
+        height: 100px;
+        justify-content: flex-start;
+        gap:60px;
+        
+            
+        
+    }
+    .box-logo {
+        display: flex;
+    }
+    .logo {
+        margin-left: 70px;
+        transition: .5s ease-out;
+        
+    }
+    .logo:hover {
+        transform: scale(1.5);
+        transition: .5s ease-in;
+;    }
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .nav-wrapper {
+        flex-direction: row;
+        height: fit-content;
+        padding: 0;
+        width: 80vw;
+        margin-top:12px;
+        justify-content: space-between;
+        font-size: .9rem;
+        
+    }
+    .nav-wrapper ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        
+    }
+    
+    li a {
+        
+        transition: color .3s;
+    }
+     li a:hover {
+        color: black;
+        transition: color .3s;
+    }
+    .features ul {
+        flex-direction: column;
+        width: 150px;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(75, 75, 75,.3);
+        border-radius: 10px;
+        top:55px;
+        transform: translateX(-70px) ;
+        
+    }
+    .company ul {
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(75, 75, 75,.3);
+        border-radius: 10px;
+        top:55px;
+    }
+    
+    
+        
+    
+    button {
+        margin-top: 0;
+        width: 100px;
+        
+    }
+    .buttons {
+        margin-left: 100px;
+    }
+    .buttons button {
+        font-size: .9rem;
+        transition: .4s;
+        
+    }
+    .buttons button:hover {
+        border-color: black;
+        color:black;
+        transform: .4s;
+    }
+    section {
+        
+        
+        text-align: left;
+        max-width: 530px;
+        
+        margin: 0;
+        margin-top: 200px;
+        margin-left: 12%;
+        
+    }
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 30px;
+    }
+    section p {
+        font-size: 1rem;
+        word-wrap: break-word;
+        width: 80%;
+    }
+    .learn-more {
+        align-self: flex-start;
+        margin-left: 0;
+        box-shadow: none;
+        transition: .5s;
+        font-weight:bold;
+        border: 1px solid transparent;
+        margin-top: 7vh;
+        width:35%;
+        height: 50px;
+        font-size: 1rem;
+        
+    }
+    .learn-more:hover {
+        background-color: white;
+        color:black;
+        border: 1px solid black;
+        transition: .5s;
+    }
+
+    .footer-image {
+        width: 6%;
+    }
+    .footer-image:nth-child(2) {
+        width: 4%;
+    }
+    footer{
+        text-align: left;
+        margin-left: 190px;
+        margin-top: 120px;
+        
+       
+    }
+}
